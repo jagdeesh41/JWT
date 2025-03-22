@@ -12,15 +12,15 @@ In SpringBootWebSecurityConfiguration.class we find the code related to security
 InMemoryUserDetailsManager -> Non-persistent implementation of UserDetailsManager which is backed by an in-memory map.
 UserDetails -> Provides core user information.
 
-`@Bean
-UserDetailsService inMem()
-{
-    UserDetails userDetails = 
-    User.builder().username("user").password("{noop}password").roles("USER").build();
-    UserDetails adminDetails = 
-    User.builder().username("admin").password("{noop}password").roles("ADMIN").build();
-    return new InMemoryUserDetailsManager(userDetails,adminDetails);
-}`
+    @Bean
+    UserDetailsService inMem()
+    {
+        UserDetails userDetails = 
+        User.builder().username("user").password("{noop}password").roles("USER").build();
+        UserDetails adminDetails = 
+        User.builder().username("admin").password("{noop}password").roles("ADMIN").build();
+        return new InMemoryUserDetailsManager(userDetails,adminDetails);
+    }
 
 `@Bean
 UserDetailsService inDb()
