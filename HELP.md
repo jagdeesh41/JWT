@@ -22,7 +22,7 @@ UserDetails -> Provides core user information.
         return new InMemoryUserDetailsManager(userDetails,adminDetails);
     }
 
-    `@Bean
+    @Bean
     UserDetailsService inDb()
     {
         UserDetails userDetails = 
@@ -33,7 +33,7 @@ UserDetails -> Provides core user information.
         userDetailsManager.createUser(userDetails);
         userDetailsManager.createUser(adminDetails);
         return userDetailsManager;
-    }`
+    }
 
 Bcrypt involves using salting , which increases security 
 
