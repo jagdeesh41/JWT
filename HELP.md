@@ -22,18 +22,18 @@ UserDetails -> Provides core user information.
         return new InMemoryUserDetailsManager(userDetails,adminDetails);
     }
 
-`@Bean
-UserDetailsService inDb()
-{
-    UserDetails userDetails = 
-    User.builder().username("user2").password("{noop}password2").roles("USER").build();
-    UserDetails adminDetails = 
-    User.builder().username("admin2").password("{noop}password2").roles("ADMIN").build();
-    UserDetailsManager userDetailsManager = new JdbcUserDetailsManager(dataSource);
-    userDetailsManager.createUser(userDetails);
-    userDetailsManager.createUser(adminDetails);
-    return userDetailsManager;
-}`
+    `@Bean
+    UserDetailsService inDb()
+    {
+        UserDetails userDetails = 
+        User.builder().username("user2").password("{noop}password2").roles("USER").build();
+        UserDetails adminDetails = 
+        User.builder().username("admin2").password("{noop}password2").roles("ADMIN").build();
+        UserDetailsManager userDetailsManager = new JdbcUserDetailsManager(dataSource);
+        userDetailsManager.createUser(userDetails);
+        userDetailsManager.createUser(adminDetails);
+        return userDetailsManager;
+    }`
 
 Bcrypt involves using salting , which increases security 
 
