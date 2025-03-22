@@ -41,5 +41,5 @@ Bcrypt involves using salting , which increases security
 
 ![JWT Image](/images/jwt.png)
 
-![JWT STRUCTURE](/images/jwt_str.png)
+![](/images/jwt_str.png)
 
