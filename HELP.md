@@ -1,4 +1,4 @@
-**SPRING SECURITY** 
+# SPRING SECURITY
 Look for this class where you find the SpringBootWebSecurityConfiguration
 In SpringBootWebSecurityConfiguration.class we find the code related to security filter
 
@@ -50,16 +50,16 @@ Understanding implementation of JWT
 
 Let's talk about each file and know the importance of each
 
-**JwtUtils**
+# JwtUtils
  --> Contains utility methods for generating, parsing and validating JWT.
  --> Include generating a token from username, validating a JWT, and extracting the username from a token 
 
-**AuthTokenFilter**
+# AuthTokenFilter
  --> we will write our own custom filter to intercept the request and do validation with the help of JwtUtils
  --> Filters incoming requests to check for a valid JWT in the header 
     setting the authentication context if the token is valid
 
-**AuthEntryPointJwt**
+# AuthEntryPointJwt
  --> Provides custom handling for unauthorized requests, 
     typically when authentication is required but not supplied or valid 
  --> when an unauthorized request is detected , it logs the error and return 
