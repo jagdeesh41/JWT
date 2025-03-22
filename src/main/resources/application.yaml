@@ -8,3 +8,9 @@ spring:
   datasource:
     url: jdbc:h2:mem:test
 
+
+jwt:
+  secret: mySecretKey123
+  expiry: 3600000
+
+
