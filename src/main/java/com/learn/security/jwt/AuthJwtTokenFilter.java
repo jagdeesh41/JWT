@@ -19,7 +19,7 @@ import java.util.Objects;
 
 @Component
 @Slf4j
-public class AuthTokenFilter extends OncePerRequestFilter
+public class AuthJwtTokenFilter extends OncePerRequestFilter
 {
     @Autowired
     private JwtUtils jwtUtils;

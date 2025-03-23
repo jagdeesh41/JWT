@@ -10,7 +10,7 @@ spring:
 
 
 jwt:
-  secret: mySecretKey123
+  secret: mySecretKey123qwertyuixjkdajfjhdfdjkasdbjasjkdl
   expiry: 3600000
 
 
